@@ -102,6 +102,15 @@ jlink {
     mergedModule {
         // Add the service used by paho so the merged automatic-module can provide it
         uses("org.eclipse.paho.client.mqttv3.internal.NetworkModuleService")
+        uses("org.eclipse.paho.client.mqttv3.spi.NetworkModuleFactory")
+        requires("java.logging")
+
+        provides("org.eclipse.paho.client.mqttv3.spi.NetworkModuleFactory").with(
+            "org.eclipse.paho.client.mqttv3.internal.TCPNetworkModuleFactory",
+            "org.eclipse.paho.client.mqttv3.internal.SSLNetworkModuleFactory",
+            "org.eclipse.paho.client.mqttv3.internal.websocket.WebSocketNetworkModuleFactory",
+            "org.eclipse.paho.client.mqttv3.internal.websocket.WebSocketSecureNetworkModuleFactory"
+        )
     }
 
     //for better compatibility(but will need wix)

@@ -165,17 +165,17 @@ public class MainView {
         Label sectionLabel = new Label("MQTT Broker Configuration");
         sectionLabel.getStyleClass().add("section-title");
 
-        brokerField = new TextField("tcp://localhost:1883");
+        brokerField = new TextField("tcp://18.219.121.50:1883");
         brokerField.setPromptText("Broker URL");
 
         topicField = new TextField("sensor/weight");
         topicField.setPromptText("Topic");
 
-        usernameField = new TextField("admin");
+        usernameField = new TextField("bahati");
         usernameField.setPromptText("Username");
 
         passwordField = new PasswordField();
-        passwordField.setText("admin123");
+        passwordField.setText("We1ght@RDr");
         passwordField.setPromptText("Password");
 
         connectButton = new Button("Connect to Broker");

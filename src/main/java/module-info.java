@@ -13,6 +13,9 @@ module org.serial.serial {
     requires org.eclipse.paho.client.mqttv3;
     requires com.fazecast.jSerialComm;
 
+    uses org.eclipse.paho.client.mqttv3.internal.NetworkModuleService;
+
     opens org.serial.serial to javafx.fxml;
+
     exports org.serial.serial;
 }
