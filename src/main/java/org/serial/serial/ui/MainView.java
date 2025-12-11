@@ -171,7 +171,10 @@ public class MainView {
         topicField = new TextField("sensor/weight");
         topicField.setPromptText("Topic");
 
-        usernameField = new TextField("bahati");
+//        usernameField = new TextField("bahati");
+//        usernameField.setPromptText("Username");
+        usernameField = new PasswordField();
+        usernameField.setText("bahati");  // optional default
         usernameField.setPromptText("Username");
 
         passwordField = new PasswordField();
